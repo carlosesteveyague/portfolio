@@ -1,2 +1,2 @@
-<strong>Web Development</strong> — University of Valencia, 2024
-<strong>Artificial Intelligence Fundamentals</strong> — Elite Tech Academy, 2023
+<strong>Item 1</strong> — Location 1, 2024
+<strong>Item 2</strong> — Location 2, 2023

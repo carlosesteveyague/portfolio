@@ -1,2 +1,2 @@
-<a href="https://github.com/yourusername/project1" target="_blank">Project 1</a> — Web scraping for academic papers.
-<a href="https://github.com/yourusername/project2" target="_blank">Project 2</a> — Data visualization in JavaScript.
+<a href="#" target="_blank">Project 1</a> — Item 1
+<a href="#" target="_blank">Project 2</a> — Item 2
