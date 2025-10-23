@@ -75,3 +75,23 @@ footer {
   background-color: #1e293b;
   color: white;
 }
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.profile .info {
+  flex: 1;
+  min-width: 250px;
+}
