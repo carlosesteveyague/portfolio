@@ -19,3 +19,16 @@ async function loadData(file, elementId) {
 loadData("data/papers.txt", "papers-list");
 loadData("data/code.txt", "code-list");
 loadData("data/teaching.txt", "teaching-list");
+
+(() => {
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  const checkScroll = () => {
+    if (window.scrollY > 40) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  };
+
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  document.addEventListener('DOMContentLoaded', checkScroll);
+})();

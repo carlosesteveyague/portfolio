@@ -10,26 +10,61 @@ header {
   background-color: #1e293b;
   color: white;
   padding: 1.5rem;
-  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 20px;
+  transition: all 240ms ease;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 
+/* default header layout (centered) */
 header h1 {
   margin: 0;
+  font-size: 2em;
+  transition: all 240ms ease;
+}
+header nav {
+  margin-top: 10px;
+  transition: all 240ms ease;
 }
 
-nav {
-  margin-top: 0.5rem;
+/* scrolled state: keep header on top, switch to row and space-between */
+header.scrolled {
+  background: #1e293b;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 28px;
 }
 
+/* make h1 smaller/more left in scrolled state */
+header.scrolled h1 {
+  font-size: 1.05rem;
+  margin-right: 12px;
+}
+
+/* nav moves to the right when scrolled */
+header.scrolled nav {
+  margin-top: 0;
+}
+
+/* small layout niceties for links */
 nav a {
-  color: #facc15;
-  margin: 0 1rem;
+  margin: 0 8px;
   text-decoration: none;
+  color: #facc15;
   font-weight: bold;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #fff;
 }
 
 main {
@@ -94,4 +129,31 @@ footer {
 .profile .info {
   flex: 1;
   min-width: 250px;
+}
+
+/* Prevent horizontal overflow by using border-box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ensure images never overflow their containers */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* make nav flexible so links can wrap instead of forcing page width */
+header nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* keep header full-width without overflow (padding included by border-box) */
+header {
+  left: 0;
+  right: 0;
 }
